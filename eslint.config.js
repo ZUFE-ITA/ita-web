@@ -14,5 +14,6 @@ export default antfu({
 		'vue/array-bracket-spacing': [ 'error', 'always' ],
 		'style/array-bracket-spacing': [ 'error', 'always' ],
 		'no-console': 'error',
+		'ts/no-unsafe-function-type': 'off',
 	},
 })
