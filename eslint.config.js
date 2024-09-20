@@ -12,5 +12,6 @@ export default antfu({
 		'style/no-tabs': 'off',
 		'vue/array-bracket-spacing': [ 'error', 'always' ],
 		'style/array-bracket-spacing': [ 'error', 'always' ],
+		'no-console': 'error',
 	},
 })

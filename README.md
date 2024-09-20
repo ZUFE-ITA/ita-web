@@ -42,7 +42,7 @@ pnpm db:apply:local
 
 ## 权限
 
-ExecEe\*\*： Priority; Event; Challenge; Blog
+格式：Priority; Event; Challenge; Blog
 
 - Priority
   - [0-9]

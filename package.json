@@ -8,10 +8,13 @@
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare",
-		"prepare": "husky"
+		"prepare": "husky",
+		"db:migrate:local": "bun ./scripts/prisma-to-wrangler.ts",
+		"db:apply:local": "wrangler d1 migrations apply DB -e preview --local"
 	},
 	"dependencies": {
 		"@cloudflare/workers-types": "latest",
+		"@prisma/adapter-d1": "^5.19.1",
 		"@types/lodash-es": "^4.17.12",
 		"@vueuse/core": "^11.1.0",
 		"dayjs": "^1.11.13",
@@ -25,12 +28,15 @@
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^3.6.2",
+		"@types/prompts": "^2.4.9",
 		"@unocss/eslint-plugin": "^0.62.3",
 		"@unocss/nuxt": "^0.62.4",
+		"bun": "^1.1.29",
 		"eslint": "^9.10.0",
 		"eslint-plugin-format": "^0.1.2",
 		"husky": "^9.1.6",
 		"lint-staged": "^15.2.10",
+		"prompts": "^2.4.2",
 		"unocss": "^0.62.4",
 		"wrangler": "latest"
 	}
