@@ -11,6 +11,9 @@ importers:
       '@cloudflare/workers-types':
         specifier: latest
         version: 4.20240919.0
+      '@prisma/adapter-d1':
+        specifier: ^5.19.1
+        version: 5.19.1
       '@types/lodash-es':
         specifier: ^4.17.12
         version: 4.17.12
@@ -45,12 +48,18 @@ importers:
       '@antfu/eslint-config':
         specifier: ^3.6.2
         version: 3.6.2(@typescript-eslint/utils@8.6.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(@unocss/eslint-plugin@0.62.4(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2))(@vue/compiler-sfc@3.5.6)(eslint-plugin-format@0.1.2(eslint@9.10.0(jiti@1.21.6)))(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
+      '@types/prompts':
+        specifier: ^2.4.9
+        version: 2.4.9
       '@unocss/eslint-plugin':
         specifier: ^0.62.3
         version: 0.62.4(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
       '@unocss/nuxt':
         specifier: ^0.62.4
         version: 0.62.4(magicast@0.3.5)(postcss@8.4.47)(rollup@4.22.0)(vite@5.4.6(@types/node@22.5.5)(terser@5.33.0))(webpack-sources@3.2.3)(webpack@5.94.0(esbuild@0.17.19))
+      bun:
+        specifier: ^1.1.29
+        version: 1.1.29
       eslint:
         specifier: ^9.10.0
         version: 9.10.0(jiti@1.21.6)
@@ -63,6 +72,9 @@ importers:
       lint-staged:
         specifier: ^15.2.10
         version: 15.2.10
+      prompts:
+        specifier: ^2.4.2
+        version: 2.4.2
       unocss:
         specifier: ^0.62.4
         version: 0.62.4(@unocss/webpack@0.62.4(rollup@4.22.0)(webpack@5.94.0(esbuild@0.17.19)))(postcss@8.4.47)(rollup@4.22.0)(vite@5.4.6(@types/node@22.5.5)(terser@5.33.0))
@@ -321,6 +333,9 @@ packages:
   '@cloudflare/workers-shared@0.5.3':
     resolution: {integrity: sha512-Yk5Im7zsyKbzd7qi+DrL7ZJR9+bdZwq9BqZWS4muDIWA8MCUeSLsUC+C9u+jdwfPSi5It2AcQG4f0iwZr6jkkQ==}
     engines: {node: '>=16.7.0'}
+
+  '@cloudflare/workers-types@4.20240614.0':
+    resolution: {integrity: sha512-fnV3uXD1Hpq5EWnY7XYb+smPcjzIoUFiZpTSV/Tk8qKL3H+w6IqcngZwXQBZ/2U/DwYkDilXHW3FfPhnyD7FZA==}
 
   '@cloudflare/workers-types@4.20240919.0':
     resolution: {integrity: sha512-DZwTpZVAV+fKTLxo6ntC2zMNRL/UJwvtMKUt/U7ZyJdR+t0qcBUZGx8jLi9gOFWYxkzO3s7slajwkR2hQRPXYQ==}
@@ -1069,6 +1084,46 @@ packages:
     peerDependencies:
       vue: ^3.3.4
 
+  '@oven/bun-darwin-aarch64@1.1.29':
+    resolution: {integrity: sha512-Z8WnrXoAXg6ENU6z+Mil94oipMBMliJIj4XWWqjNC33/ZGPqMdPT5MbFQjbdHjxe5bRBW/aHaMU3G35fGx9Seg==}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@oven/bun-darwin-x64-baseline@1.1.29':
+    resolution: {integrity: sha512-B+zKlJR+3ANPDU+vNjvXaqgB63hYcCk16/k45hiInvIsDXfSdDn4+LMHwZTFdfUWTCGbNMFg9u4bZCtK0nhMDw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oven/bun-darwin-x64@1.1.29':
+    resolution: {integrity: sha512-tDHDR+OWLCKEP0xE8IGCWRxSsxO5tr3rvyrSzy6CXYkoWPz66kODbtbGfWl8HSwunrQxJKnE2L9LWX2Eiz3Cpw==}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oven/bun-linux-aarch64@1.1.29':
+    resolution: {integrity: sha512-BuV2Gni+FaMo1r7+3vLjefQYtQcWE01zJJ4zCjyzikP1L4r6PUaLeJyKXbqF6sIR0cLjG6LWj66EGskakDyvWA==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@oven/bun-linux-x64-baseline@1.1.29':
+    resolution: {integrity: sha512-tQhm1SDyymBvc2L3zIN7FI+sI3g9gxavDYuvL/Lz17nEk1oqP5DFE2lF9QWJMDdQL3XQKH/drI27yNpfPHgAPw==}
+    cpu: [x64]
+    os: [linux]
+
+  '@oven/bun-linux-x64@1.1.29':
+    resolution: {integrity: sha512-JVLiTafybuOFIeC80mZEzHdkOCCzlOtOV5zCbvYAIb7D3SM64fNBwrR0dvDkJTQtsjbwt8YeVFN2YRSI/wlFkw==}
+    cpu: [x64]
+    os: [linux]
+
+  '@oven/bun-windows-x64-baseline@1.1.29':
+    resolution: {integrity: sha512-+QWT8Kp+3Sl54QUa6uBsDzQlX11thMMVAw+yUwSRU4Y5FVSN8RPuxhN8ijJ1QGm1KOYA2sCI6V+3lyNMNmRvAA==}
+    cpu: [x64]
+    os: [win32]
+
+  '@oven/bun-windows-x64@1.1.29':
+    resolution: {integrity: sha512-d930+pSkNVHPJJBryIh1gsAKk7lp1HzcktFe0bfxwmpHwjj4BiVfMjU1YaCnsdWKNs2Nv1Y1PLVDNyUCQVfo0Q==}
+    cpu: [x64]
+    os: [win32]
+
   '@parcel/watcher-android-arm64@2.4.1':
     resolution: {integrity: sha512-LOi/WTbbh3aTn2RYddrO8pnapixAziFl6SMxHM69r3tvdSm94JtCenaKgk1GRg5FJ5wpMCpHeW+7yqPlvZv7kg==}
     engines: {node: '>= 10.0.0'}
@@ -1167,8 +1222,14 @@ packages:
   '@polka/url@1.0.0-next.28':
     resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
+  '@prisma/adapter-d1@5.19.1':
+    resolution: {integrity: sha512-yPP6RTyLrUcMXWxj1vtKI1FfTEUSyY5BO4vFcywcU8aadtZ7jijwHc6g05fzRjgGdLn+OyHRaV++OCeEz7Va4A==}
+
   '@prisma/debug@5.19.1':
     resolution: {integrity: sha512-lAG6A6QnG2AskAukIEucYJZxxcSqKsMK74ZFVfCTOM/7UiyJQi48v6TQ47d6qKG3LbMslqOvnTX25dj/qvclGg==}
+
+  '@prisma/driver-adapter-utils@5.19.1':
+    resolution: {integrity: sha512-98PZ4MWYddRFRlEZXSXGIPeNxtY3ErRH13rir8j31YcqQDPuAWG0dWAjIp1h7NL3uewj+QF5UkDXRnTgoCE4Wg==}
 
   '@prisma/engines-version@5.19.1-2.69d742ee20b815d88e17e54db4a2a7a3b30324e3':
     resolution: {integrity: sha512-xR6rt+z5LnNqTP5BBc+8+ySgf4WNMimOKXRn6xfNRDSpHvbOEmd7+qAOmzCrddEc4Cp8nFC0txU14dstjH7FXA==}
@@ -1396,6 +1457,9 @@ packages:
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+
+  '@types/prompts@2.4.9':
+    resolution: {integrity: sha512-qTxFi6Buiu8+50/+3DGIWLHM6QuWsEKugJnnP6iv2Mc4ncxE4A/OJkjuVOA+5X0X1S/nq5VJRa8Lu+nwcvbrKA==}
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
@@ -1911,6 +1975,11 @@ packages:
   builtin-modules@3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
+
+  bun@1.1.29:
+    resolution: {integrity: sha512-SKhpyKNZtgxrVel9ec9xon3LDv8mgpiuFhARgcJo1YIbggY2PBrKHRNiwQ6Qlb+x3ivmRurfuwWgwGexjpgBRg==}
+    os: [darwin, linux, win32]
+    hasBin: true
 
   bundle-name@4.1.0:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
@@ -5245,6 +5314,8 @@ snapshots:
       mime: 3.0.0
       zod: 3.23.8
 
+  '@cloudflare/workers-types@4.20240614.0': {}
+
   '@cloudflare/workers-types@4.20240919.0': {}
 
   '@cspotcode/source-map-support@0.8.1':
@@ -5915,6 +5986,30 @@ snapshots:
       - vue-tsc
       - webpack-sources
 
+  '@oven/bun-darwin-aarch64@1.1.29':
+    optional: true
+
+  '@oven/bun-darwin-x64-baseline@1.1.29':
+    optional: true
+
+  '@oven/bun-darwin-x64@1.1.29':
+    optional: true
+
+  '@oven/bun-linux-aarch64@1.1.29':
+    optional: true
+
+  '@oven/bun-linux-x64-baseline@1.1.29':
+    optional: true
+
+  '@oven/bun-linux-x64@1.1.29':
+    optional: true
+
+  '@oven/bun-windows-x64-baseline@1.1.29':
+    optional: true
+
+  '@oven/bun-windows-x64@1.1.29':
+    optional: true
+
   '@parcel/watcher-android-arm64@2.4.1':
     optional: true
 
@@ -5983,7 +6078,16 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
+  '@prisma/adapter-d1@5.19.1':
+    dependencies:
+      '@cloudflare/workers-types': 4.20240614.0
+      '@prisma/driver-adapter-utils': 5.19.1
+
   '@prisma/debug@5.19.1': {}
+
+  '@prisma/driver-adapter-utils@5.19.1':
+    dependencies:
+      '@prisma/debug': 5.19.1
 
   '@prisma/engines-version@5.19.1-2.69d742ee20b815d88e17e54db4a2a7a3b30324e3': {}
 
@@ -6173,6 +6277,11 @@ snapshots:
       undici-types: 6.19.8
 
   '@types/normalize-package-data@2.4.4': {}
+
+  '@types/prompts@2.4.9':
+    dependencies:
+      '@types/node': 22.5.5
+      kleur: 3.0.3
 
   '@types/resolve@1.20.2': {}
 
@@ -6928,6 +7037,17 @@ snapshots:
       ieee754: 1.2.1
 
   builtin-modules@3.3.0: {}
+
+  bun@1.1.29:
+    optionalDependencies:
+      '@oven/bun-darwin-aarch64': 1.1.29
+      '@oven/bun-darwin-x64': 1.1.29
+      '@oven/bun-darwin-x64-baseline': 1.1.29
+      '@oven/bun-linux-aarch64': 1.1.29
+      '@oven/bun-linux-x64': 1.1.29
+      '@oven/bun-linux-x64-baseline': 1.1.29
+      '@oven/bun-windows-x64': 1.1.29
+      '@oven/bun-windows-x64-baseline': 1.1.29
 
   bundle-name@4.1.0:
     dependencies:

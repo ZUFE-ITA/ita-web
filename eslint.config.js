@@ -13,5 +13,6 @@ export default antfu({
 		'style/linebreak-style': [ 'error', 'unix' ],
 		'vue/array-bracket-spacing': [ 'error', 'always' ],
 		'style/array-bracket-spacing': [ 'error', 'always' ],
+		'no-console': 'error',
 	},
 })
