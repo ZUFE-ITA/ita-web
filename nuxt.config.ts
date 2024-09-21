@@ -3,11 +3,18 @@ export default defineNuxtConfig({
 	future: {
 		compatibilityVersion: 4,
 	},
-	modules: [
-		'@unocss/nuxt',
-	],
+
+	build: {
+		transpile: [ 'trpc-nuxt' ],
+	},
+
+	modules: [ '@unocss/nuxt', '@pinia/nuxt' ],
+
 	unocss: {
 		nuxtLayers: true,
 	},
+
 	devtools: { enabled: true },
+
+	compatibilityDate: '2024-09-21',
 })
