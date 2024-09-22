@@ -8,10 +8,21 @@ export default defineNuxtConfig({
 		transpile: [ 'trpc-nuxt' ],
 	},
 
-	modules: [ '@unocss/nuxt', '@pinia/nuxt' ],
+	modules: [ '@unocss/nuxt', '@pinia/nuxt', 'shadcn-nuxt', 'nitro-cloudflare-dev' ],
+
+	nitro: {
+		experimental: {
+			wasm: true,
+		},
+	},
 
 	unocss: {
 		nuxtLayers: true,
+	},
+
+	shadcn: {
+		prefix: '',
+		componentDir: './app/components/ui',
 	},
 
 	devtools: { enabled: true },
