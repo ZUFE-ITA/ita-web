@@ -1,5 +1,5 @@
+import { execFileSync } from 'node:child_process'
 /* eslint-disable no-console */
-import { execSync } from 'node:child_process'
 import * as fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
@@ -28,7 +28,7 @@ else if (
 ) {
 	console.log('迁移记录存在，但是数据库不存在，将会自动创建数据库...')
 	toProjectRootCwd(() => {
-		execSync('pnpm db:apply:local', {
+		execFileSync('pnpm', [ 'db:apply:local' ], {
 			stdio: 'inherit',
 		})
 	})
@@ -36,21 +36,17 @@ else if (
 
 let sql: string
 if (isInit) {
-	sql = execSync(
-		`pnpm prisma migrate diff \
-			--script \
-			--from-empty \
-			--to-schema-datamodel ${schemaPath}`,
+	sql = execFileSync(
+		'pnpm',
+		[ 'prisma', 'migrate', 'diff', '--script', '--from-empty', '--to-schema-datamodel', schemaPath ],
 		{ encoding: 'utf-8' },
 	)
 }
 else {
 	sql = toProjectRootCwd(() =>
-		execSync(
-			`pnpm prisma migrate diff \
-				--script \
-				--from-local-d1 \
-				--to-schema-datamodel ${schemaPath}`,
+		execFileSync(
+			'pnpm',
+			[ 'prisma', 'migrate', 'diff', '--script', '--from-local-d1', '--to-schema-datamodel', schemaPath ],
 			{ encoding: 'utf-8' },
 		),
 	)
