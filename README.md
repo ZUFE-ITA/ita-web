@@ -1,11 +1,5 @@
 ## Dev
 
-**在拉取代码前请先执行：**
-
-```sh
-git config --global core.autocrlf false
-```
-
 ### 开发环境
 
 |        | Version |
@@ -48,7 +42,7 @@ pnpm db:apply:local
 
 ## 权限
 
-ExecEe\*\*： Priority; Event; Challenge; Blog
+**格式**： Priority; Event; Challenge; Blog
 
 - Priority
   - [0-9]
