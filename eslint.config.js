@@ -10,7 +10,6 @@ export default antfu({
 		'vue/html-indent': [ 'error', 'tab' ],
 		'jsonc/indent': [ 'error', 'tab' ],
 		'style/no-tabs': 'off',
-		'style/linebreak-style': [ 'error', 'unix' ],
 		'vue/array-bracket-spacing': [ 'error', 'always' ],
 		'style/array-bracket-spacing': [ 'error', 'always' ],
 	},
