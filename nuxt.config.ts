@@ -8,10 +8,35 @@ export default defineNuxtConfig({
 		transpile: [ 'trpc-nuxt' ],
 	},
 
-	modules: [ '@unocss/nuxt', '@pinia/nuxt' ],
+	modules: [
+		'@formkit/auto-animate/nuxt',
+		'@nuxtjs/i18n',
+		'@pinia/nuxt',
+		'@unocss/nuxt',
+		'nitro-cloudflare-dev',
+		'shadcn-nuxt',
+	],
+
+	nitro: {
+		experimental: {
+			wasm: true,
+		},
+	},
+
+	i18n: {
+		defaultLocale: 'zh',
+		locales: [ 'en', 'zh' ],
+		lazy: true,
+		vueI18n: './app/i18n.config.ts',
+	},
 
 	unocss: {
 		nuxtLayers: true,
+	},
+
+	shadcn: {
+		prefix: '',
+		componentDir: './app/components/ui',
 	},
 
 	devtools: { enabled: true },

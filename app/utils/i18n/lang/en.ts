@@ -1,4 +1,6 @@
 export default {
+	username: 'Username',
+	studentNo: 'Student number',
 	cancel: 'Cancel',
 	confirm: 'Confirm',
 	confirmPassword: 'Confirm password',
@@ -20,6 +22,5 @@ export default {
 		invalidEmailOrPassword: 'Invalid email or password',
 		loginFailed: 'Login failed',
 		registerFailed: 'Register failed',
-
 	},
 }

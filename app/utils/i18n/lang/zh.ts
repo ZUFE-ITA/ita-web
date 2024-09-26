@@ -1,6 +1,8 @@
 import type en from './en'
 
 export default {
+	username: '用户名',
+	studentNo: '学号',
 	cancel: '取消',
 	confirm: '确认',
 	confirmPassword: '确认密码',
