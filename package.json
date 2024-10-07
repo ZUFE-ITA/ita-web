@@ -18,7 +18,7 @@
 		"@nuxtjs/i18n": "^8.5.5",
 		"@pinia/nuxt": "^0.5.4",
 		"@prisma/adapter-d1": "^5.19.1",
-		"@prisma/client": "5.19.1",
+		"@prisma/client": "5.20.0",
 		"@trpc/client": "11.0.0-rc.563",
 		"@trpc/server": "11.0.0-rc.563",
 		"@types/bcryptjs": "^2.4.6",
