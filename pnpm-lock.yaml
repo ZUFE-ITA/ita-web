@@ -24,8 +24,8 @@ importers:
         specifier: ^5.19.1
         version: 5.19.1
       '@prisma/client':
-        specifier: 5.19.1
-        version: 5.19.1(prisma@5.19.1)
+        specifier: 5.20.0
+        version: 5.20.0(prisma@5.19.1)
       '@trpc/client':
         specifier: 11.0.0-rc.563
         version: 11.0.0-rc.563(@trpc/server@11.0.0-rc.563)
@@ -1376,8 +1376,8 @@ packages:
   '@prisma/adapter-d1@5.19.1':
     resolution: {integrity: sha512-yPP6RTyLrUcMXWxj1vtKI1FfTEUSyY5BO4vFcywcU8aadtZ7jijwHc6g05fzRjgGdLn+OyHRaV++OCeEz7Va4A==}
 
-  '@prisma/client@5.19.1':
-    resolution: {integrity: sha512-x30GFguInsgt+4z5I4WbkZP2CGpotJMUXy+Gl/aaUjHn2o1DnLYNTA+q9XdYmAQZM8fIIkvUiA2NpgosM3fneg==}
+  '@prisma/client@5.20.0':
+    resolution: {integrity: sha512-CLv55ZuMuUawMsxoqxGtLT3bEZoa2W8L3Qnp6rDIFWy+ZBrUcOFKdoeGPSnbBqxc3SkdxJrF+D1veN/WNynZYA==}
     engines: {node: '>=16.13'}
     peerDependencies:
       prisma: '*'
@@ -6629,7 +6629,7 @@ snapshots:
       '@cloudflare/workers-types': 4.20240614.0
       '@prisma/driver-adapter-utils': 5.19.1
 
-  '@prisma/client@5.19.1(prisma@5.19.1)':
+  '@prisma/client@5.20.0(prisma@5.19.1)':
     optionalDependencies:
       prisma: 5.19.1
 
