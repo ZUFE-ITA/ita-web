@@ -17,7 +17,7 @@
 		"@formkit/auto-animate": "^0.8.2",
 		"@nuxtjs/i18n": "^8.5.5",
 		"@pinia/nuxt": "^0.5.4",
-		"@prisma/adapter-d1": "^5.19.1",
+		"@prisma/adapter-d1": "^5.20.0",
 		"@prisma/client": "5.19.1",
 		"@trpc/client": "11.0.0-rc.563",
 		"@trpc/server": "11.0.0-rc.563",
